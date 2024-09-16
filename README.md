@@ -25,13 +25,10 @@ Certifique-se de que o chromedriver está no seu PATH ou especifique o caminho d
 
 ## Estrutura do Código
 **Settings**
-Neste caso SeleniumLibrary
-
 **Variables**
-
 **Keywords**
-
 **Test Cases**
 
 ## Comando para executar os testes
-robot nome_do_arquivo.robot
+robot bdd_busca_site.robot
+robot bdd_carrinho.robot
