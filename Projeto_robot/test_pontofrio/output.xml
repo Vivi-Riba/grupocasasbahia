@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.9.7 on win32)" generated="2024-09-15T22:00:05.685171" rpa="false" schemaversion="5">
+<suite id="s1" name="Bdd Carrinho" source="C:\Projeto_robot\test_pontofrio\bdd_carrinho.robot">
+<test id="s1-t1" name="Cenário 1: Adicionar produto ao carrinho através da busca" line="82">
+<kw name="Dado que eu abra o navegador e acesse o site ponto frio">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:06.188195" level="INFO">Opening browser 'Chrome' to base url 'https://www.pontofrio.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-15T22:00:06.187192" elapsed="6.958956"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-15T22:00:13.147148" elapsed="0.271833"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:06.185197" elapsed="7.233784"/>
+</kw>
+<kw name="Quando eu digitar no campo encontre aqui as melhores ofertas">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:13.429972" level="INFO">Typing text 'Fogão Consul' into text field '//input[@data-testid='search-form-input']'.</msg>
+<arg>${Input_pesquisar}</arg>
+<arg>Fogão Consul</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:13.428972" elapsed="0.583642"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:13.427972" elapsed="0.585641"/>
+</kw>
+<kw name="E clicar no botão buscar">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:14.280024" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-botao-antes-1.png"&gt;&lt;img src="selenium-botao-antes-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>selenium-botao-antes-1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-15T22:00:14.015611" elapsed="0.264413"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:14.281023" level="INFO">Clicking element '//button[@data-testid='search-form-button']'.</msg>
+<arg>${Button_busca}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:14.281023" elapsed="0.606509"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:15.058967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-botao-depois-1.png"&gt;&lt;img src="selenium-botao-depois-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>selenium-botao-depois-1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-15T22:00:14.888531" elapsed="0.170436"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:15.059968" level="INFO">Clicking element '//button[@data-testid='search-form-button']'.</msg>
+<msg time="2024-09-15T22:00:15.229496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-15T22:00:15.229496" level="FAIL">Element with locator '//button[@data-testid='search-form-button']' not found.</msg>
+<arg>${Button_busca}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-09-15T22:00:15.059968" elapsed="0.173525">Element with locator '//button[@data-testid='search-form-button']' not found.</status>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:14.014611" elapsed="1.219882">Element with locator '//button[@data-testid='search-form-button']' not found.</status>
+</kw>
+<kw name="E clico no primeiro produto da lista">
+<status status="NOT RUN" start="2024-09-15T22:00:15.235494" elapsed="0.000000"/>
+</kw>
+<kw name="E clicar no botão comprar">
+<status status="NOT RUN" start="2024-09-15T22:00:15.235983" elapsed="0.000000"/>
+</kw>
+<kw name="Quando selecionar o radio button sem serviço técnico">
+<status status="NOT RUN" start="2024-09-15T22:00:15.235983" elapsed="0.001008"/>
+</kw>
+<kw name="E clicar no botão continuar">
+<status status="NOT RUN" start="2024-09-15T22:00:15.236991" elapsed="0.000000"/>
+</kw>
+<kw name="Entao visualizarei o produto adicionado ao carrinho">
+<status status="NOT RUN" start="2024-09-15T22:00:15.236991" elapsed="0.000995"/>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:06.183198" elapsed="9.054788">Element with locator '//button[@data-testid='search-form-button']' not found.</status>
+</test>
+<test id="s1-t2" name="Cenário 2: Adicionar produto ao carrinho através da compra por Departamento" line="93">
+<kw name="Dado que eu abra o navegador e acesse o site ponto frio">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:15.243984" level="INFO">Opening browser 'Chrome' to base url 'https://www.pontofrio.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-15T22:00:15.242986" elapsed="7.441416"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-15T22:00:22.684402" elapsed="0.170896"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:15.241986" elapsed="7.614311"/>
+</kw>
+<kw name="Quando eu clicar em Compre por Departamento">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:22.878284" level="INFO">Clicking element '//button[@aria-label="Compre por departamentos"]'.</msg>
+<arg>${Compra_Departamento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:22.877284" elapsed="0.464716"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:23.342998" level="INFO">Clicking element '//button[@aria-label="Compre por departamentos"]'.</msg>
+<arg>${Compra_Departamento}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:23.342000" elapsed="0.152905"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:22.876285" elapsed="0.619623"/>
+</kw>
+<kw name="E selecionar a categoria Eletroportáteis">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:23.501905" level="INFO">Clicking element '//span[contains(text(),"Eletroportáteis")]'.</msg>
+<arg>${Eletroportáteis}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:23.499910" elapsed="1.307024"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:23.498903" elapsed="1.309030"/>
+</kw>
+<kw name="E clico no primeiro produto da lista">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:35.027772" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-15T22:00:35.027772" level="FAIL">Element '(//div[@class="css-1enexmx"])[1]' not visible after 10 seconds.</msg>
+<arg>${Primeiro_Produto_Busca}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-15T22:00:24.810932" elapsed="10.219259">Element '(//div[@class="css-1enexmx"])[1]' not visible after 10 seconds.</status>
+</kw>
+<kw name="Click Element ${Primeiro_Produto_Busca}">
+<status status="NOT RUN" start="2024-09-15T22:00:35.032370" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:24.809932" elapsed="10.222438">Element '(//div[@class="css-1enexmx"])[1]' not visible after 10 seconds.</status>
+</kw>
+<kw name="E clicar no botão comprar">
+<status status="NOT RUN" start="2024-09-15T22:00:35.033327" elapsed="0.000000"/>
+</kw>
+<kw name="Quando selecionar o radio button sem serviço técnico">
+<status status="NOT RUN" start="2024-09-15T22:00:35.034333" elapsed="0.000000"/>
+</kw>
+<kw name="E clicar no botão continuar">
+<status status="NOT RUN" start="2024-09-15T22:00:35.035332" elapsed="0.000000"/>
+</kw>
+<kw name="Entao visualizarei o produto adicionado ao carrinho">
+<status status="NOT RUN" start="2024-09-15T22:00:35.035332" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:15.239986" elapsed="19.796345">Element '(//div[@class="css-1enexmx"])[1]' not visible after 10 seconds.</status>
+</test>
+<test id="s1-t3" name="Cenário 3: Adicionar produto ao carrinho através dos indicados com base nas suas visitas" line="104">
+<kw name="Dado que eu abra o navegador e acesse o site ponto frio">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:35.042326" level="INFO">Opening browser 'Chrome' to base url 'https://www.pontofrio.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-15T22:00:35.041327" elapsed="14.192843"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-15T22:00:49.234170" elapsed="0.440729"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:35.040329" elapsed="14.634570"/>
+</kw>
+<kw name="E clico em um produto &quot;indicados com base nas suas visitas&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:49.680896" level="INFO">Executing JavaScript:
+window.scrollTo(0, 550)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, 550)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-15T22:00:49.679897" elapsed="0.092942"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:00:49.774837" level="INFO">Clicking element '//img[@alt="Ar e Ventilação"]'.</msg>
+<arg>${Indicado_com_base_visistas}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-15T22:00:49.773838" elapsed="1.222830"/>
+</kw>
+<status status="PASS" start="2024-09-15T22:00:49.677897" elapsed="1.318771"/>
+</kw>
+<kw name="E clicar no botão comprar">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-15T22:01:01.317809" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-15T22:01:01.318808" level="FAIL">Element '//button[@data-testid='buy-butto']' not visible after 10 seconds.</msg>
+<arg>${Button_Comprar}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-15T22:00:50.999667" elapsed="10.320141">Element '//button[@data-testid='buy-butto']' not visible after 10 seconds.</status>
+</kw>
+<kw name="Click Element ${Button_Comprar}">
+<status status="NOT RUN" start="2024-09-15T22:01:01.320808" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Continuar_Compra}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-15T22:01:01.320808" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${Button_Continuar_Compra}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-15T22:01:01.321806" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:50.998667" elapsed="10.324139">Element '//button[@data-testid='buy-butto']' not visible after 10 seconds.</status>
+</kw>
+<kw name="Quando selecionar o radio button sem serviço técnico">
+<status status="NOT RUN" start="2024-09-15T22:01:01.323805" elapsed="0.000000"/>
+</kw>
+<kw name="E clicar no botão continuar">
+<status status="NOT RUN" start="2024-09-15T22:01:01.324805" elapsed="0.000000"/>
+</kw>
+<kw name="Entao visualizarei o produto adicionado ao carrinho">
+<status status="NOT RUN" start="2024-09-15T22:01:01.325805" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-15T22:00:35.037329" elapsed="26.289475">Element '//button[@data-testid='buy-butto']' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" start="2024-09-15T22:00:05.690168" elapsed="55.645629"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Bdd Carrinho">Bdd Carrinho</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
