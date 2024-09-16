@@ -17,7 +17,7 @@ Instalar:
 
 1. **Instale o Robot Framework e SeleniumLibrary:**
 
-   ```bash   pip install robotframework seleniumlibrary
+     pip install robotframework seleniumlibrary
    
 2. ** Baixe e configure o ChromeDriver:**
 Baixe o ChromeDriver compatível com sua versão do Google Chrome.
